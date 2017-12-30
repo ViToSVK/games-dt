@@ -3,13 +3,13 @@ We present the artifact of the TACAS 2018 paper:
 Tomas Brazdil, Krishnendu Chatterjee, Jan Kretınsky, and Viktor Toman
 
 Structure:
-* benchmarks:: AIGER files and parity automata used in the experiments
-* bin:: compiled Java bytecodes
-* lib:: JavaBDD library used to manipulate with BDDs
-* results:: generated training sets, decision trees, and experiment reports
-* src:: source code
-* run.sh:: shell script to run the program on Linux
-* run.bat:: PowerShell script to run the program on Windows
+* benchmarks -- AIGER files and parity automata used in the experiments
+* bin -- compiled Java bytecodes
+* lib -- JavaBDD library used to manipulate with BDDs
+* results -- generated training sets, decision trees, and experiment reports
+* src -- source code
+* run.sh -- shell script to run the program on Linux
+* run.bat -- PowerShell script to run the program on Windows
 
 The program (i.e. script) expects one input string-argument:
 * 'a'   -- creates AIGER games and solves them
