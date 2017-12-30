@@ -1,0 +1,564 @@
+HOA: v1
+properties: state-acc 
+States: 131
+Start: 0
+AP: 2 "p2" "p1"
+Acceptance: 2 Fin(0) & Inf(1)
+acc-name: parity min odd 2
+name: "Automaton for {((((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]}"
+tool: "Owl" "* *"
+--BODY--
+State: 0 "{((((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]}" {}
+[!1 & !0] 1
+[1 & !0] 2
+[!1 & 0] 3
+[1 & 0] 4
+State: 1 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[1 & !0] 5
+[!1 & !0] 6
+[!1 & 0] 7
+[1 & 0] 8
+State: 2 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 9
+[1 & !0] 10
+[1 & 0] 11
+[!1 & 0] 12
+State: 3 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & !0] 1
+[!1 & 0] 3
+[1 & 0] 4
+[1 & !0] 2
+State: 4 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & !0] 13
+[!1 & 0] 14
+[!1 & !0] 15
+[1 & 0] 16
+State: 5 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 9
+[1 & !0] 10
+[1 & 0] 11
+[!1 & 0] 12
+State: 6 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[1 & !0] 5
+[!1 & !0] 6
+[!1 & 0] 7
+[1 & 0] 8
+State: 7 "{(((XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 17
+[1] 18
+State: 8 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[!1] 19
+[1] 20
+State: 9 "{(((!p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[1 & !0] 21
+[1 & 0] 22
+[!1 & !0] 23
+[!1 & 0] 24
+State: 10 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 25
+[!1 & 0] 26
+[1 & !0] 27
+[!1 & !0] 28
+State: 11 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[1] 29
+[!1] 30
+State: 12 "{(((!p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[1] 31
+[!1] 32
+State: 13 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 25
+[!1 & 0] 26
+[1 & !0] 27
+[!1 & !0] 28
+State: 14 "{(((XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[1 & 0] 33
+[!1 & !0] 34
+[!1 & 0] 35
+[1 & !0] 36
+State: 15 "{(((!p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[1 & !0] 21
+[1 & 0] 22
+[!1 & !0] 23
+[!1 & 0] 24
+State: 16 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 37
+[!1 & 0] 38
+[1 & 0] 39
+[1 & !0] 40
+State: 17 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[1] 41
+[!1] 42
+State: 18 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[1] 43
+[!1] 44
+State: 19 "{(((!p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 45
+[1] 46
+State: 20 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[!1] 47
+[1] 48
+State: 21 "{(((!p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 49
+[!1 & 0] 50
+[1 & !0] 51
+[!1 & !0] 52
+State: 22 "{(((!p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[!1] 53
+[1] 54
+State: 23 "{(((!p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[1 & !0] 55
+[1 & 0] 56
+[!1 & !0] 57
+[!1 & 0] 58
+State: 24 "{(((!p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[1] 59
+[!1] 60
+State: 25 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[1] 61
+[!1] 62
+State: 26 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 63
+[1] 64
+State: 27 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & !0] 65
+[!1 & !0] 66
+[!1 & 0] 67
+[1 & 0] 68
+State: 28 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & 0] 69
+[1 & 0] 70
+[1 & !0] 71
+[!1 & !0] 72
+State: 29 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[1] 73
+[!1] 74
+State: 30 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 75
+[1] 76
+State: 31 "{(((!p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[!1] 77
+[1] 78
+State: 32 "{(((!p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[1] 79
+[!1] 80
+State: 33 "{(((Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 81
+[!1 & 0] 82
+[1 & 0] 83
+[1 & !0] 84
+State: 34 "{(((!p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[1 & !0] 55
+[1 & 0] 56
+[!1 & !0] 57
+[!1 & 0] 58
+State: 35 "{(((Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[1 & 0] 85
+[!1 & !0] 86
+[!1 & 0] 87
+[1 & !0] 88
+State: 36 "{(((!p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 49
+[!1 & 0] 50
+[1 & !0] 51
+[!1 & !0] 52
+State: 37 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & 0] 69
+[1 & 0] 70
+[1 & !0] 71
+[!1 & !0] 72
+State: 38 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & 0] 89
+[!1 & !0] 90
+[1 & 0] 91
+[1 & !0] 92
+State: 39 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 93
+[!1 & !0] 94
+[!1 & 0] 95
+[1 & !0] 96
+State: 40 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & !0] 65
+[!1 & !0] 66
+[!1 & 0] 67
+[1 & 0] 68
+State: 41 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[0] 97
+[1 & !0] 98
+[!1 & !0] 99
+State: 42 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[0] 97
+[!1 & !0] 100
+[1 & !0] 101
+State: 43 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[0] 97
+[1 & !0] 102
+[!1 & !0] 103
+State: 44 "{(((!p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[0] 97
+[1 & !0] 104
+[!1 & !0] 105
+State: 45 "{(((!p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[0] 97
+[!1 & !0] 106
+[1 & !0] 107
+State: 46 "{(((!p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & !0] 108
+[!1 & !0] 109
+[0] 97
+State: 47 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[0] 97
+[!1 & !0] 110
+[1 & !0] 111
+State: 48 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[0] 97
+[!1 & !0] 112
+[1 & !0] 113
+State: 49 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[1] 29
+[!1] 30
+State: 50 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[1] 31
+[!1] 32
+State: 51 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 37
+[1 & 0] 25
+[!1 & 0] 26
+[1 & !0] 40
+State: 52 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & !0] 34
+[1 & 0] 22
+[1 & !0] 36
+[!1 & 0] 24
+State: 53 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 45
+[1] 46
+State: 54 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[!1] 47
+[1] 48
+State: 55 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & !0] 13
+[!1 & !0] 15
+[1 & 0] 11
+[!1 & 0] 12
+State: 56 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[!1] 19
+[1] 20
+State: 57 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & !0] 1
+[!1 & 0] 7
+[1 & 0] 8
+[1 & !0] 2
+State: 58 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 17
+[1] 18
+State: 59 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[1] 43
+[!1] 44
+State: 60 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[1] 41
+[!1] 42
+State: 61 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[1] 73
+[!1] 74
+State: 62 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 75
+[1] 76
+State: 63 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[1] 79
+[!1] 80
+State: 64 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[!1] 77
+[1] 78
+State: 65 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 94
+[1 & !0] 96
+[!1 & 0] 67
+[1 & 0] 68
+State: 66 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & 0] 69
+[1 & 0] 70
+[!1 & !0] 90
+[1 & !0] 92
+State: 67 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]}" {0}
+[!1] 63
+[1] 64
+State: 68 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]}" {0}
+[1] 61
+[!1] 62
+State: 69 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]}" {0}
+[1] 59
+[!1] 60
+State: 70 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]}" {0}
+[!1] 53
+[1] 54
+State: 71 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 81
+[1 & 0] 49
+[!1 & 0] 50
+[1 & !0] 84
+State: 72 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & !0] 86
+[1 & 0] 56
+[1 & !0] 88
+[!1 & 0] 58
+State: 73 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!0] 97
+[!1 & 0] 112
+[1 & 0] 113
+State: 74 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!0] 97
+[!1 & 0] 110
+[1 & 0] 111
+State: 75 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!0] 97
+[!1 & 0] 106
+[1 & 0] 107
+State: 76 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 108
+[!1 & 0] 109
+[!0] 97
+State: 77 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!0] 97
+[1 & 0] 104
+[!1 & 0] 105
+State: 78 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!0] 97
+[1 & 0] 102
+[!1 & 0] 103
+State: 79 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!0] 97
+[1 & 0] 98
+[!1 & 0] 99
+State: 80 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!0] 97
+[!1 & 0] 100
+[1 & 0] 101
+State: 81 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & !0] 34
+[1 & 0] 22
+[1 & !0] 36
+[!1 & 0] 24
+State: 82 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & !0] 34
+[1 & 0] 114
+[1 & !0] 36
+[!1 & 0] 115
+State: 83 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 116
+[!1 & !0] 37
+[!1 & 0] 117
+[1 & !0] 40
+State: 84 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 37
+[1 & 0] 25
+[!1 & 0] 26
+[1 & !0] 40
+State: 85 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 118
+[1 & !0] 13
+[!1 & 0] 119
+[!1 & !0] 15
+State: 86 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & !0] 1
+[!1 & 0] 7
+[1 & 0] 8
+[1 & !0] 2
+State: 87 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[1 & 0] 120
+[!1 & !0] 1
+[!1 & 0] 121
+[1 & !0] 2
+State: 88 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & !0] 13
+[!1 & !0] 15
+[1 & 0] 11
+[!1 & 0] 12
+State: 89 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & !0] 86
+[1 & 0] 122
+[1 & !0] 88
+[!1 & 0] 123
+State: 90 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & !0] 86
+[1 & 0] 56
+[1 & !0] 88
+[!1 & 0] 58
+State: 91 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[1 & 0] 124
+[!1 & !0] 81
+[!1 & 0] 125
+[1 & !0] 84
+State: 92 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 81
+[1 & 0] 49
+[!1 & 0] 50
+[1 & !0] 84
+State: 93 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 94
+[1 & 0] 126
+[1 & !0] 96
+[!1 & 0] 127
+State: 94 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & 0] 69
+[1 & 0] 70
+[!1 & !0] 90
+[1 & !0] 92
+State: 95 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {0}
+[!1 & 0] 128
+[!1 & !0] 90
+[1 & 0] 129
+[1 & !0] 92
+State: 96 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {0}
+[!1 & !0] 94
+[1 & !0] 96
+[!1 & 0] 67
+[1 & 0] 68
+State: 97 "{(true::{}) [0]|[1]}" {0}
+[t] 130
+State: 98 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[0] 97
+[1 & !0] 102
+[!1 & !0] 103
+State: 99 "{(((!p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[0] 97
+[1 & !0] 104
+[!1 & !0] 105
+State: 100 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[0] 97
+[!1 & !0] 100
+[1 & !0] 101
+State: 101 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|Xp0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[0] 97
+[1 & !0] 98
+[!1 & !0] 99
+State: 102 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[0] 97
+[!1 & !0] 112
+[1 & !0] 113
+State: 103 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[0] 97
+[!1 & !0] 110
+[1 & !0] 111
+State: 104 "{(((!p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & !0] 108
+[!1 & !0] 109
+[0] 97
+State: 105 "{(((!p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|X!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|p0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[0] 97
+[!1 & !0] 106
+[1 & !0] 107
+State: 106 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!0] 97
+[!1 & 0] 100
+[1 & 0] 101
+State: 107 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!0] 97
+[1 & 0] 98
+[!1 & 0] 99
+State: 108 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!0] 97
+[1 & 0] 102
+[!1 & 0] 103
+State: 109 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|Xp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!0] 97
+[1 & 0] 104
+[!1 & 0] 105
+State: 110 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!0] 97
+[!1 & 0] 106
+[1 & 0] 107
+State: 111 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 108
+[!1 & 0] 109
+[!0] 97
+State: 112 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|XX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&((p1&XXXX!p0)|F(p1&XXXX!p0)|XXXp0|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!0] 97
+[!1 & 0] 110
+[1 & 0] 111
+State: 113 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|!p0|X!p0|XX!p0|XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)|(p0&(XXX!p0|(p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!0] 97
+[!1 & 0] 112
+[1 & 0] 113
+State: 114 "{(((Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 81
+[!1 & 0] 82
+[1 & 0] 83
+[1 & !0] 84
+State: 115 "{(((Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[1 & 0] 85
+[!1 & !0] 86
+[!1 & 0] 87
+[1 & !0] 88
+State: 116 "{(((!p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 93
+[!1 & !0] 94
+[!1 & 0] 95
+[1 & !0] 96
+State: 117 "{(((!p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & 0] 89
+[!1 & !0] 90
+[1 & 0] 91
+[1 & !0] 92
+State: 118 "{(((!p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 37
+[!1 & 0] 38
+[1 & 0] 39
+[1 & !0] 40
+State: 119 "{(((XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[1 & 0] 33
+[!1 & !0] 34
+[!1 & 0] 35
+[1 & !0] 36
+State: 120 "{(((!p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & !0] 13
+[!1 & 0] 14
+[!1 & !0] 15
+[1 & 0] 16
+State: 121 "{(((!p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={((p1&XXXXp0)|(!p1&XXXX!p0))=5, !p0=1, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & !0] 1
+[!1 & 0] 3
+[1 & 0] 4
+[1 & !0] 2
+State: 122 "{(((p0&X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 118
+[1 & !0] 13
+[!1 & 0] 119
+[!1 & !0] 15
+State: 123 "{(((p0&X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[1 & 0] 120
+[!1 & !0] 1
+[!1 & 0] 121
+[1 & !0] 2
+State: 124 "{(((p0&X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 116
+[!1 & !0] 37
+[!1 & 0] 117
+[1 & !0] 40
+State: 125 "{(((p0&X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(X!p0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, X!p0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & !0] 34
+[1 & 0] 114
+[1 & !0] 36
+[!1 & 0] 115
+State: 126 "{(((p0&Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXXp0=4}}) [0]|[0]}" {1}
+[!1 & !0] 94
+[1 & 0] 126
+[1 & !0] 96
+[!1 & 0] 127
+State: 127 "{(((p0&Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXp0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XXp0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & 0] 128
+[!1 & !0] 90
+[1 & 0] 129
+[1 & !0] 92
+State: 128 "{(((p0&Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXX!p0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXX!p0=4}}) [0]|[0]}" {1}
+[!1 & !0] 86
+[1 & 0] 122
+[1 & !0] 88
+[!1 & 0] 123
+State: 129 "{(((p0&Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(Xp0&XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XX!p0&XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(XXXp0&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|((p0|X!p0)&((p1&XXXXp0)|(!p1&XXXX!p0))&G((p1&XXXXp0)|(!p1&XXXX!p0)))|F((p0|X!p0)&G((p1&XXXXp0)|(!p1&XXXX!p0)))|(!p0&Xp0&((p1&XXXX!p0)|F(p1&XXXX!p0)|(!p1&XXXXp0)|F(!p1&XXXXp0)))|F(!p0&Xp0&(F(p1&XXXX!p0)|F(!p1&XXXXp0))))::{G((p1&XXXXp0)|(!p1&XXXX!p0))={p0=1, ((p1&XXXXp0)|(!p1&XXXX!p0))=5, Xp0=2, XX!p0=3, XXXp0=4}}) [0]|[0]}" {1}
+[1 & 0] 124
+[!1 & !0] 81
+[!1 & 0] 125
+[1 & !0] 84
+State: 130 "{(true::{}) [0]|[1]}" {1}
+[t] 130
+--END--
