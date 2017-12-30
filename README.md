@@ -2,6 +2,8 @@ We present the artifact of the TACAS 2018 paper:
 **Strategy Representation by Decision Trees in Reactive Synthesis**  
 Tomas Brazdil, Krishnendu Chatterjee, Jan Kretinsky, and Viktor Toman
 
+Artifact Digital Object Identifier: [![DOI](https://zenodo.org/badge/115788584.svg)](https://zenodo.org/badge/latestdoi/115788584)
+
 Structure:
 * benchmarks -- AIGER files and parity automata used in the experiments
 * bin -- compiled Java bytecodes
