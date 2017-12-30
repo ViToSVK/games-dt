@@ -22,6 +22,6 @@ The program (i.e. script) expects one input string-argument:
 * 'wTOTAL' -- performs entire Scheduling of Washing Cycles experiments
 * 'rTOTAL' -- performs entire Random LTL experiments
 
-In addition, we provide a simple C++ binary in results/BDDreorder  
+In addition, we provide a simple C++ binary results/BDDreorder  
 and a shell script results/runBDDreorder.sh that runs reordering  
 experiments on all data sets located in results/datasets
