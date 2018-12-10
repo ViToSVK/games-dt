@@ -10,6 +10,7 @@ This repository contains a version with small new modifications.
 
 Structure:
 * benchmarks -- AIGER files and parity automata used in the experiments
+* lib -- JavaBDD library used to manipulate with BDDs
 * src -- source code
 * run.sh -- shell script to run the program on Linux
 * run.bat -- PowerShell script to run the program on Windows
