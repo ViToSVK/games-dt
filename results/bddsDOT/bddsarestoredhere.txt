@@ -1,1 +1,0 @@
-BDDs are stored in this folder

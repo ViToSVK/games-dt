@@ -21,7 +21,7 @@ import util.Pair;
  *
  */
 public class Dataset {
-	
+
 	public ArrayList<Integer> positions;
 	public ArrayList<String> attributes;
 	public ArrayList<Instance> instances;
@@ -29,7 +29,7 @@ public class Dataset {
 	public char objective; // 's'afety 'r'eachability 'p'arity
 	public int numYES;
 	public int numNO;
-	
+
 	/** Constructor which creates a dataset from given attributes and strategy
 	 * @param  game       Game instance
 	 * @param  strategy   Use this strategy to create instances
@@ -39,7 +39,7 @@ public class Dataset {
 		this.objective = strategy.objective;
 		this.numYES = strategy.bitvYES;
 		this.numNO = strategy.bitvNO;
-		
+
 		attributes = new ArrayList<String>();
 		if (strategy.player == 1) {
 			for (int j=0; j<game.varStateP1no(); j++)
@@ -53,11 +53,11 @@ public class Dataset {
 				attributes.add(game.varActionP2.get(j));
 		}
 		attributes.trimToSize();
-		
+
 		positions = new ArrayList<Integer>(attributes.size());
 		for (int i=0; i<attributes.size(); i++)
 			positions.add(i);
-		
+
 		instances = new ArrayList<Instance>(strategy.bitv.keySet().size());
 		int keysizeS = (strategy.player == 1)?game.varStateP1no():game.varStateP2no();
 		int keysizeA = (strategy.player == 1)?game.varActionP1no():game.varActionP2no();
@@ -66,7 +66,7 @@ public class Dataset {
 			instances.add(new Instance(key, strategy.bitv.get(key)));
 		}
 	}
-	
+
 	/**
 	 * Creates a dataset from an ARFF file
 	 * @param filename		Read this ARFF file
@@ -77,11 +77,11 @@ public class Dataset {
 		try (Scanner sc = new Scanner(new File("results/datasets/"+filename+".arff"))) {
 			String token;
 			int test;
-			
+
 			this.positions = new ArrayList<Integer>();
 			this.attributes = new ArrayList<String>();
 			this.instances = new ArrayList<Instance>();
-			
+
 			boolean now = false;
 			while (!now) {
 				token = sc.next();
@@ -90,7 +90,7 @@ public class Dataset {
 			token = sc.next();
 			token = token.substring(6);
 			writer.write(String.format("%-30s",token));
-			
+
 			now = false;
 			while (!now) {
 				token = sc.next();
@@ -98,7 +98,7 @@ public class Dataset {
 			}
 			test = sc.nextInt();
 			writer.write(String.format("%12d",test));
-			
+
 			now = false;
 			while (!now) {
 				token = sc.next();
@@ -106,7 +106,7 @@ public class Dataset {
 			}
 			test = sc.nextInt();
 			writer.write(String.format("%6d",test));
-			
+
 			now = false;
 			while (!now) {
 				token = sc.next();
@@ -123,7 +123,7 @@ public class Dataset {
 			test = sc.nextInt();
 			assert(test == 2 || test == 1);
 			this.player = (byte) test;
-			
+
 			now = false;
 			while (!now) {
 				token = sc.next();
@@ -148,7 +148,7 @@ public class Dataset {
 			}
 			test = sc.nextInt();
 			this.numNO = test;
-			
+
 			now = false;
 			while (!now) {
 				token = sc.next();
@@ -156,7 +156,7 @@ public class Dataset {
 			}
 			int samples = sc.nextInt();
 			writer.write(String.format("%16d",samples));
-			
+
 			now = false;
 			while (!now) {
 				token = sc.next();
@@ -164,7 +164,7 @@ public class Dataset {
 			}
 			token = sc.next();
 			assert(token.equals("strategy"));
-			
+
 			int attNumber = 0;
 			while (!token.equals("@DATA")) {
 				token = sc.next();
@@ -178,9 +178,9 @@ public class Dataset {
 					}
 				}
 			}
-			
+
 			// now begins the strategy
-			
+
 			for (int i=0; i<samples; i++) {
 				token = sc.next();
 				ArrayList<Boolean> newb = new ArrayList<Boolean>();
@@ -191,11 +191,11 @@ public class Dataset {
 				assert(token.charAt(2*attNumber) == 'y' || token.charAt(2*attNumber) == 'n');
 				this.instances.add(new Instance(newb, (token.charAt(2*attNumber) == 'y')));
 			}
-			
+
 			assert(this.instances.size() == this.numNO + this.numYES);
 		}
 	}
-	
+
 	/** Private constructor used in method split for creating a dataset baseline
 	 * @param  source  	 Source dataset
 	 * @param  predicate Disjunction (or a single atom) used to split the dataset
@@ -205,7 +205,7 @@ public class Dataset {
 		for (Pair<Boolean,Integer> atom : predicate)
 			assert(atom.second() >= 0 && atom.second() < source.attributes.size());
 		assert(source.attributes.size() == source.positions.size());
-		
+
 		this.player = source.player;
 		this.objective = source.objective;
 		this.numYES = 0;
@@ -222,14 +222,14 @@ public class Dataset {
 				}
 			if (!contains) {
 				this.attributes.add(new String(source.attributes.get(i)));
-				this.positions.add(new Integer(source.positions.get(i)));
+				this.positions.add(Integer.valueOf(source.positions.get(i)));
 			}
 		}
 
-		
+
 		this.instances = new ArrayList<Instance>(source.instances.size());
 	}
-	
+
 	/** Splits the dataset based on the values of the chosen attribute
 	 * @param  predicate Disjunction (or a single atom) used to split the dataset
 	 * @return Two datasets, first doesn't satisfy the predicate, second does
@@ -239,10 +239,10 @@ public class Dataset {
 		for (Pair<Boolean,Integer> atom : predicate)
 			assert(atom.second() >= 0 && atom.second() < attributes.size());
 		assert(attributes.size() == positions.size());
-		
+
 		Dataset unsat = new Dataset(this, predicate);
 		Dataset sat = new Dataset(this, predicate);
-		
+
 		for (int i=0; i<instances.size(); i++) {
 			boolean satisfies = false;
 			for (Pair<Boolean,Integer> atom : predicate)
@@ -250,7 +250,7 @@ public class Dataset {
 					satisfies = true;
 					break;
 				}
-			
+
 			if (!satisfies) {
 				unsat.instances.add(new Instance(instances.get(i), predicate));
 				if (instances.get(i).classValue)
@@ -265,17 +265,17 @@ public class Dataset {
 					sat.numNO++;
 			}
 		}
-		
+
 		unsat.instances.trimToSize();
 		sat.instances.trimToSize();
-		
+
 		return new Pair<Dataset,Dataset>(unsat, sat);
 	}
 
-	/** 
+	/**
 	 * Computes which predicate is best for splitting the dataset
 	 * @param allowdisjunction	False - only atoms as predicates, True - disjunctions allowed
-	 * @return 
+	 * @return
 	 */
 	protected HashSet<Pair<Boolean,Integer>> bestInfoGain(boolean allowdisjunction) {
 		assert(instances.size() == numYES + numNO);
@@ -286,11 +286,11 @@ public class Dataset {
 			result.add(new Pair<Boolean,Integer>(true,0));
 			return result;
 		}
-		
+
 		TreeMap<Integer,int[]> numYESatt = new TreeMap<Integer,int[]>();
 		TreeMap<Integer,int[]> numNOatt = new TreeMap<Integer,int[]>();
 		TreeMap<Integer,int[]> numTOTatt = new TreeMap<Integer,int[]>();
-		
+
 		for (int i=0; i<attributes.size(); i++) {
 			numYESatt.put(i, new int[2]);
 			numNOatt.put(i, new int[2]);
@@ -298,9 +298,9 @@ public class Dataset {
 			for (int j=0; j<2; j++) {
 				numYESatt.get(i)[j] = 0;
 				numNOatt.get(i)[j] = 0;
-			}	
+			}
 		}
-		
+
 		for (Instance instance : instances) {
 			if (instance.classValue) {
 				for (int i=0; i<attributes.size(); i++)
@@ -310,18 +310,18 @@ public class Dataset {
 					numNOatt.get(i)[(instance.attValues.get(i)?1:0)]++;
 			}
 		}
-		
+
 		int numTOT = numYES + numNO;
 		for (int i=0; i<attributes.size(); i++)
 			for (int j=0; j<2; j++)
 				numTOTatt.get(i)[j] = numYESatt.get(i)[j] + numNOatt.get(i)[j];
-		
+
 		TreeMap<Integer,float[]> pAtt = new TreeMap<Integer,float[]>();
 		TreeMap<Integer,float[]> pYESgAtt = new TreeMap<Integer,float[]>();
 		TreeMap<Integer,float[]> pNOgAtt = new TreeMap<Integer,float[]>();
 		float pYES = ((float) numYES) / numTOT;
 		float pNO = ((float) numNO) / numTOT;
-		
+
 		for (int i=0; i<attributes.size(); i++) {
 			pAtt.put(i, new float[2]);
 			pYESgAtt.put(i, new float[2]);
@@ -337,15 +337,15 @@ public class Dataset {
 				}
 			}
 		}
-		
+
 		float best = (float) 0.001;
 		HashSet<Pair<Boolean,Integer>> bestpred = null;
-		
+
 		float originalentropy = 0;
 		assert(pYES > 0 && pNO > 0);
 		originalentropy -= ( pYES * (Math.log(pYES) / Math.log(2)) );
 		originalentropy -= ( pNO  * (Math.log(pNO)  / Math.log(2)) );
-		
+
 		for (int i=0; i<attributes.size(); i++) {
 			float current = originalentropy;
 			for (int j=0; j<2; j++) {
@@ -353,7 +353,7 @@ public class Dataset {
 				if (pYESgAtt.get(i)[j] > 0)
 					conditionedentropy -= ( pYESgAtt.get(i)[j] * (Math.log(pYESgAtt.get(i)[j]) / Math.log(2)) );
 				if (pNOgAtt.get(i)[j] > 0)
-					conditionedentropy -= ( pNOgAtt.get(i)[j]  * (Math.log(pNOgAtt.get(i)[j])  / Math.log(2)) );					
+					conditionedentropy -= ( pNOgAtt.get(i)[j]  * (Math.log(pNOgAtt.get(i)[j])  / Math.log(2)) );
 				current -= pAtt.get(i)[j] * conditionedentropy;
 			}
 			if (current > best) {
@@ -362,16 +362,16 @@ public class Dataset {
 				bestpred.add(new Pair<Boolean,Integer>(true, i));
 			}
 		}
-		
-		
+
+
 		// Take two special disjunction into consideration
-		
+
 		if (allowdisjunction) {
 			TreeSet<Integer> zeroOnlyYes = new TreeSet<Integer>();
 			TreeSet<Integer> zeroOnlyNo = new TreeSet<Integer>();
 			TreeSet<Integer> oneOnlyYes = new TreeSet<Integer>();
 			TreeSet<Integer> oneOnlyNo = new TreeSet<Integer>();
-			
+
 			for (int i=0; i<attributes.size(); i++) {
 				if (numYESatt.get(i)[0] == numTOTatt.get(i)[0] && numTOTatt.get(i)[0] > 0) {
 					assert(numNOatt.get(i)[0] == 0);
@@ -392,13 +392,13 @@ public class Dataset {
 					assert(numYESatt.get(i)[1] == 0);
 					assert(numYESatt.get(i)[0] > 0);
 					oneOnlyNo.add(i);
-				}				
-			}			
-			
+				}
+			}
+
 			if (zeroOnlyYes.size() + oneOnlyYes.size() <= 1 &&
 					zeroOnlyNo.size() + oneOnlyNo.size() <= 1)
 				return bestpred;
-			
+
 			HashSet<Pair<Integer,Integer>> couldbesame = new HashSet<Pair<Integer,Integer>>();
 			for (int at1 : zeroOnlyYes) for (int at2 : zeroOnlyYes) if (at1 < at2)
 				couldbesame.add(new Pair<Integer,Integer>(at1,at2));
@@ -408,9 +408,9 @@ public class Dataset {
 				couldbesame.add(new Pair<Integer,Integer>(at1,at2));
 			for (int at1 : oneOnlyNo) for (int at2 : oneOnlyNo) if (at1 < at2)
 				couldbesame.add(new Pair<Integer,Integer>(at1,at2));
-			
+
 			for (Instance instance : instances) {
-				if (couldbesame.isEmpty()) break;				
+				if (couldbesame.isEmpty()) break;
 				for (Iterator<Pair<Integer,Integer>> i = couldbesame.iterator(); i.hasNext();) {
 					Pair<Integer,Integer> atom = i.next();
 				    if (!instance.attValues.get(atom.first()).equals(instance.attValues.get(atom.second()))) {
@@ -418,33 +418,33 @@ public class Dataset {
 				    }
 				}
 			}
-			
+
 			for (Pair<Integer,Integer> atom : couldbesame) {
 				zeroOnlyYes.remove(atom.second());
 				zeroOnlyNo.remove(atom.second());
 				oneOnlyYes.remove(atom.second());
 				oneOnlyNo.remove(atom.second());
 			}
-			
+
 			if (zeroOnlyYes.size() + oneOnlyYes.size() <= 1 &&
 					zeroOnlyNo.size() + oneOnlyNo.size() <= 1)
-				return bestpred;			
-			
+				return bestpred;
+
 			// Disjunction: satisfying it leads to NO
 			int numTOTunsatInNODISJ = 0;
 			int numYESunsatInNODISJ = 0;
 			int numNOunsatInNODISJ = 0;
-			
+
 			// Disjunction: satisfying it leads to YES
 			int numTOTunsatInYESDISJ = 0;
 			int numYESunsatInYESDISJ = 0;
 			int numNOunsatInYESDISJ = 0;
-			
-			
+
+
 			for (Instance instance : instances) {
 				boolean unsatNODISJ = true;
 				boolean unsatYESDISJ = true;
-				
+
 				for (int i=0; i<attributes.size(); i++)
 					if (!instance.attValues.get(i)) {
 						// attribute value is 0
@@ -465,9 +465,9 @@ public class Dataset {
 						if (unsatNODISJ && oneOnlyNo.contains(i)) {
 							unsatNODISJ = false;
 							assert(!instance.classValue);
-						}						
+						}
 					}
-				
+
 				// note: both unsat-s can be true
 				if (unsatNODISJ) {
 					numTOTunsatInNODISJ++;
@@ -476,7 +476,7 @@ public class Dataset {
 					else
 						numNOunsatInNODISJ++;
 				}
-				
+
 				if (unsatYESDISJ) {
 					numTOTunsatInYESDISJ++;
 					if (instance.classValue)
@@ -485,17 +485,17 @@ public class Dataset {
 						numNOunsatInYESDISJ++;
 				}
 			}
-			
+
 			float pUnsatOfNODISJ = ((float) numTOTunsatInNODISJ) / numTOT;
 			float pUnsatOfYESDISJ = ((float) numTOTunsatInYESDISJ) / numTOT;
-			
+
 			float pYESwhenUnsatOfNODISJ = ((float) numYESunsatInNODISJ) / numTOTunsatInNODISJ;
 			float pNOwhenUnsatOfNODISJ = ((float) numNOunsatInNODISJ) / numTOTunsatInNODISJ;
-			
+
 			float pYESwhenUnsatOfYESDISJ = ((float) numYESunsatInYESDISJ) / numTOTunsatInYESDISJ;
 			float pNOwhenUnsatOfYESDISJ = ((float) numNOunsatInYESDISJ) / numTOTunsatInYESDISJ;
-			
-			
+
+
 			// Compute Information gain when using the NO disjunction
 			// In sat-part everything is NO so the entropy of
 			// this part is 0, therefore the information gain
@@ -505,9 +505,9 @@ public class Dataset {
 			if (pYESwhenUnsatOfNODISJ > 0)
 				conditionedentropy -= ( pYESwhenUnsatOfNODISJ * (Math.log(pYESwhenUnsatOfNODISJ) / Math.log(2)) );
 			if (pNOwhenUnsatOfNODISJ > 0)
-				conditionedentropy -= ( pNOwhenUnsatOfNODISJ  * (Math.log(pNOwhenUnsatOfNODISJ)  / Math.log(2)) );					
+				conditionedentropy -= ( pNOwhenUnsatOfNODISJ  * (Math.log(pNOwhenUnsatOfNODISJ)  / Math.log(2)) );
 			current -= pUnsatOfNODISJ * conditionedentropy;
-			
+
 			if (current > best) {
 				best = current;
 				bestpred = new HashSet<Pair<Boolean,Integer>>();
@@ -516,7 +516,7 @@ public class Dataset {
 				for (Integer key : oneOnlyNo)
 					bestpred.add(new Pair<Boolean,Integer>(true, key));
 			}
-			
+
 			// Compute Information gain when using the YES disjunction
 			// Again, H(original) - p(unsat) * H(unsat-part)
 			current = originalentropy;
@@ -524,9 +524,9 @@ public class Dataset {
 			if (pYESwhenUnsatOfYESDISJ > 0)
 				conditionedentropy -= ( pYESwhenUnsatOfYESDISJ * (Math.log(pYESwhenUnsatOfYESDISJ) / Math.log(2)) );
 			if (pNOwhenUnsatOfYESDISJ > 0)
-				conditionedentropy -= ( pNOwhenUnsatOfYESDISJ  * (Math.log(pNOwhenUnsatOfYESDISJ)  / Math.log(2)) );					
+				conditionedentropy -= ( pNOwhenUnsatOfYESDISJ  * (Math.log(pNOwhenUnsatOfYESDISJ)  / Math.log(2)) );
 			current -= pUnsatOfYESDISJ * conditionedentropy;
-			
+
 			if (current > best) {
 				best = current;
 				bestpred = new HashSet<Pair<Boolean,Integer>>();
@@ -536,11 +536,11 @@ public class Dataset {
 					bestpred.add(new Pair<Boolean,Integer>(true, key));
 			}
 		}
-		
+
 		return bestpred;
 	}
-	
-	/** 
+
+	/**
 	 * Computes which attribute is the best for <br>
 	 * splitting the dataset, uses the Lookahead approach
 	 * @return The index of attribute which is best for splitting, <br>
@@ -551,8 +551,8 @@ public class Dataset {
 		assert(numYES > 0 && numNO > 0);
 		assert(attributes.size() >= 2);
 		if (instances.size() < 4) return -1;
-		
-		
+
+
 		int numAtt = attributes.size();
 		TreeMap<Integer,int[][]> n2attT = new TreeMap<Integer,int[][]>();
 		TreeMap<Integer,int[][]> n2attY = new TreeMap<Integer,int[][]>();
@@ -568,7 +568,7 @@ public class Dataset {
 						n2attN.get(i*numAtt+j)[k][l] = 0;
 					}
 			}
-		
+
 		TreeMap<Integer,int[]> n1attT = new TreeMap<Integer,int[]>();
 		TreeMap<Integer,int[]> n1attY = new TreeMap<Integer,int[]>();
 		TreeMap<Integer,int[]> n1attN = new TreeMap<Integer,int[]>();
@@ -581,7 +581,7 @@ public class Dataset {
 				n1attN.get(i)[j] = 0;
 			}
 		}
-		
+
 		for (Instance instance : instances) {
 			if (instance.classValue) {
 				for (int i=0; i<numAtt-1; i++) {
@@ -599,7 +599,7 @@ public class Dataset {
 				n1attN.get(numAtt-1)[instance.attValues.get(numAtt-1)?1:0]++;
 			}
 		}
-		
+
 		int numTOT = numYES + numNO;
 		for (int i=0; i<numAtt; i++)
 			for (int j=0; j<2; j++)
@@ -608,29 +608,29 @@ public class Dataset {
 			for (int j=i; j<numAtt; j++)
 				for (int k=0; k<2; k++) // values of i
 					for (int l=0; l<2; l++) // values of j
-						n2attT.get(i*numAtt+j)[k][l] = 
+						n2attT.get(i*numAtt+j)[k][l] =
 						n2attY.get(i*numAtt+j)[k][l] + n2attN.get(i*numAtt+j)[k][l];
-		
+
 		// We have all the necessary numbers from the dataset
-		
+
 		float pY = ((float) numYES) / numTOT;
 		float pN = ((float) numNO) / numTOT;
 		float h0att = 0;
 		if (pY > 0) h0att -= ( pY * (Math.log(pY) / Math.log(2)) );
 		if (pN > 0) h0att -= ( pN * (Math.log(pN) / Math.log(2)) );
-		
+
 		float best = (float) 0.001;
 		int bestpoz = -1;
 		float bestpozowninfogain = (float) 0.001;
-		
+
 		for (int a1=0; a1<numAtt; a1++) {
-		
+
 		// optAtt: a1values -> attributes
 		// optAtt( a1v ) = a2
 		// where a2 is optimal for splitting dataset_a1v
 		ArrayList<Integer> optAtt = new ArrayList<Integer>(2); // values of a1
 		for (int a1v=0; a1v<2; a1v++) { // values of a1
-			
+
 			pY = n1attT.get(a1)[a1v] == 0?0:
 				((float) n1attY.get(a1)[a1v]) / n1attT.get(a1)[a1v];
 			pN = n1attT.get(a1)[a1v] == 0?0:
@@ -638,7 +638,7 @@ public class Dataset {
 			float h1att = 0;
 			if (pY > 0) h1att -= ( pY * (Math.log(pY) / Math.log(2)) );
 			if (pN > 0) h1att -= ( pN * (Math.log(pN) / Math.log(2)) );
-			
+
 			float best1 = (float) 0.001;
 			int bestpoz1 = -1;
 			for (int a2=0; a2<numAtt; a2++)
@@ -670,10 +670,10 @@ public class Dataset {
 					best1 = current1; bestpoz1 = a2;
 				}
 			}
-			
-			optAtt.add(bestpoz1);			
+
+			optAtt.add(bestpoz1);
 		}
-		
+
 		float current = h0att;
 		// We have optAtt: a1values -> attributes
 		// For each a1v and a2v    where a2 = optAtt( a1v )
@@ -713,7 +713,7 @@ public class Dataset {
 				current -= pA1VA2V * h2att;
 			}
 		}
-		
+
 		if (current > best) {
 			best = current; bestpoz = a1;
 			bestpozowninfogain = h0att;
@@ -747,13 +747,13 @@ public class Dataset {
 				bestpozowninfogain = a1owninfogain;
 			}
 		}
-		
+
 		}
-		
+
 		return bestpoz;
 	}
-	
-	/** 
+
+	/**
 	 * Computes which attribute is the best for <br>
 	 * splitting the dataset based on a simple heuristic
 	 * @return The index of attribute which is best for splitting, <br>
@@ -763,11 +763,11 @@ public class Dataset {
 		assert(instances.size() == numYES + numNO);
 		assert(numYES > 0 && numNO > 0);
 		assert(attributes.size() >= 2);
-		
+
 		TreeMap<Integer,int[]> numYESatt = new TreeMap<Integer,int[]>();
 		TreeMap<Integer,int[]> numNOatt = new TreeMap<Integer,int[]>();
 		TreeMap<Integer,int[]> numTOTatt = new TreeMap<Integer,int[]>();
-		
+
 		for (int i=0; i<attributes.size(); i++) {
 			numYESatt.put(i, new int[2]);
 			numNOatt.put(i, new int[2]);
@@ -776,9 +776,9 @@ public class Dataset {
 				numYESatt.get(i)[j] = 0;
 				numNOatt.get(i)[j] = 0;
 				numTOTatt.get(i)[j] = 0;
-			}	
+			}
 		}
-		
+
 		for (Instance instance : instances) {
 			for (int i=0; i<attributes.size(); i++)
 				numTOTatt.get(i)[instance.attValues.get(i)?1:0]++;
@@ -790,7 +790,7 @@ public class Dataset {
 					numNOatt.get(i)[instance.attValues.get(i)?1:0]++;
 			}
 		}
-		
+
 		int bestpoz = 0;
 		double best = 0;
 		if (numTOTatt.get(0)[0] > 0 && numTOTatt.get(0)[1] > 0) {
@@ -803,7 +803,7 @@ public class Dataset {
 			if (candidate > best)
 				best = candidate;
 		}
-		
+
 		for (int i=1; i<attributes.size(); i++)
 			if (numTOTatt.get(i)[0] > 0 && numTOTatt.get(i)[1] > 0) {
 				double candidate = ((double) numYESatt.get(i)[0] / numTOTatt.get(i)[0]) +
@@ -819,12 +819,12 @@ public class Dataset {
 					bestpoz = i;
 				}
 			}
-		
+
 		if (best == 0) return -1;
-		
+
 		return bestpoz;
 	}
-	
+
 	/** Creates an arff file with the dataset in the Attribute-Relation File Format <br>
 	 *  Location: results/datasets/filename.arff
 	 * @param filename The name of the arff file
@@ -832,9 +832,12 @@ public class Dataset {
 	 * @param estimate Estimate size of state space
 	 * */
 	public void arffFile(String filename, Game game, int estimate) {
+		File directory = new File("results/datasets/");
+		if (!directory.exists())
+			directory.mkdirs();
 		File outputFile = new File("results/datasets/"+filename+".arff");
 		String nl = System.getProperty("line.separator");
-        
+
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
         	writer.write("% AUTHOR:           Viktor Toman"+nl);
 			writer.write("% FILE:             "+filename+nl);
@@ -850,12 +853,12 @@ public class Dataset {
         	writer.write("% NUMNO:            "+numNO+nl);
         	writer.write("% NUMTOT:           "+((int)(numNO+numYES))+nl);
         	writer.write("@RELATION strategy"+nl+nl);
-        	
+
         	for (int i=0; i<attributes.size(); i++) {
             	writer.write("@ATTRIBUTE \""+attributes.get(i)+"\" {0,1}"+nl);
         	}
         	writer.write("@ATTRIBUTE \"class\" {yes,no}"+nl+nl);
-        	
+
         	writer.write("@DATA"+nl);
         	for (int i=0; i<instances.size(); i++) {
         		for (int j=0; j<instances.get(i).attValues.size(); j++)
@@ -866,5 +869,5 @@ public class Dataset {
         	System.out.println(e);
         }
 	}
-	
+
 }

@@ -57,6 +57,9 @@ public class Routine {
 		int startfile = 1;
 		int endfile = 83;
 
+		File directory = new File("results/reports/");
+		if (!directory.exists())
+			directory.mkdirs();
 		File outputFile = new File("results/reports/reprRandomLTL"+(encoded?"encoded":"naive")+".txt");
 		String nl = System.getProperty("line.separator");
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, true))) {
@@ -267,6 +270,9 @@ public class Routine {
 		    	}
 		    }
 
+		File directory = new File("results/reports/");
+		if (!directory.exists())
+			directory.mkdirs();
 		File outputFile = new File("results/reports/reprWash"+(n==0?"reach":n)+".txt");
 		String nl = System.getProperty("line.separator");
 
@@ -462,6 +468,9 @@ public class Routine {
 	public static void wash(int n) {
 
 		boolean[] lightmode = {false, true};
+		File directory = new File("results/reports/");
+		if (!directory.exists())
+			directory.mkdirs();
 		File outputFile = new File("results/reports/reportwash"+n+".txt");
 		String nl = System.getProperty("line.separator");
 		GameInfo gameinfo = new GameInfo();
@@ -560,6 +569,9 @@ public class Routine {
 		    			filenamesC.add(file.getName().replace(".arff", ""));
 		    }
 
+		File directory = new File("results/reports/");
+		if (!directory.exists())
+			directory.mkdirs();
 		File outputFileC = new File("results/reports/reprAiger.txt");
 		String nl = System.getProperty("line.separator");
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileC, false))) {
@@ -657,7 +669,7 @@ public class Routine {
 	 * AIGER:: Games -> Datasets
 	 */
 	public static void aiger() {
-		String[] files = {"bs16n"}; //, "bs32n", "bs64n"}; //, "bs128n", "bs256n", "bs512n"};
+		String[] files = {"bs16n", "bs32n", "bs64n"}; //, "bs128n", "bs256n", "bs512n"};
 
 		for (int i=0; i<files.length; i++) {
 			System.gc();
