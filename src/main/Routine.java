@@ -55,7 +55,7 @@ public class Routine {
 		Random seedgen = new Random(47);
 
 		int startfile = 1;
-		int endfile = 83;
+		int endfile = 83; // 84 to 91 require parity4+ solver
 
 		File directory = new File("results/reports/");
 		if (!directory.exists())
@@ -65,7 +65,7 @@ public class Routine {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, true))) {
 
         	writer.write(String.format("%118s","|BDD|"));
-        	//writer.write(String.format("%30s","|DTnl|"));
+        	writer.write(String.format("%30s","|DTnl|"));
         	writer.write(String.format("%30s","|DT|"));
         	writer.write(String.format("%30s","|DT+|"));
         	writer.write(nl);
@@ -82,13 +82,11 @@ public class Routine {
         	writer.write(String.format("%8s","Max"));
         	writer.write(String.format("%8s","Time"));
 
-        	/*
         	writer.write(String.format("%12s", "Size"));
         	writer.write(String.format("%8s", "Time"));
         	writer.write(String.format("%4s", "LA"));
         	writer.write(String.format("%4s", "Heu"));
         	writer.write(" ?");
-        	*/
 
         	writer.write(String.format("%12s", "Size"));
         	writer.write(String.format("%8s", "Time"));
@@ -173,7 +171,6 @@ public class Routine {
 	            	dt = null;
 	            	System.gc();
 
-	            	/*
 	            	startTime = System.nanoTime();
 	            	DecisionTree dtnl = new DecisionTree(ds, false, false);
 	            	elapsedTime = System.nanoTime() - startTime;
@@ -184,41 +181,48 @@ public class Routine {
 	            	boolean resultdtnl = Parity3.checkDT(game, gameinfo, dtnl);
 	            	dtnl = null;
 	            	System.gc();
-	            	*/
 
-	            	startTime = System.nanoTime();
-	            	BinaryDecisionDiagram bdd = new BinaryDecisionDiagram(ds, false, -1);
-	            	int sizebdd = bdd.numberOfInnerNodes();
-	            	int sizebddmax = bdd.numberOfInnerNodes();
-	            	int sizebddmin = bdd.numberOfInnerNodes();
-	            	double sizebddmean = 0;
-	            	for (int j=0; j<1000; j++) {
-	            		bdd = new BinaryDecisionDiagram(ds, true, seedgen.nextInt(31337));
-	            		sizebddmax = Math.max(sizebddmax, bdd.numberOfInnerNodes());
-	            		sizebddmin = Math.min(sizebddmin, bdd.numberOfInnerNodes());
-	            		sizebddmean += bdd.numberOfInnerNodes();
-	            	}
-	            	sizebddmean /= 1000;
-	            	elapsedTime = System.nanoTime() - startTime;
-	            	double timebdd = ((double) elapsedTime) / 1000000000.0;
-	            	bdd = null;
-	            	System.gc();
+	            	if (!encoded) {
+						startTime = System.nanoTime();
+						BinaryDecisionDiagram bdd = new BinaryDecisionDiagram(ds, false, -1);
+						int sizebdd = bdd.numberOfInnerNodes();
+						int sizebddmax = bdd.numberOfInnerNodes();
+						int sizebddmin = bdd.numberOfInnerNodes();
+						double sizebddmean = 0;
+						for (int j=0; j<1000; j++) {
+							bdd = new BinaryDecisionDiagram(ds, true, seedgen.nextInt(31337));
+							sizebddmax = Math.max(sizebddmax, bdd.numberOfInnerNodes());
+							sizebddmin = Math.min(sizebddmin, bdd.numberOfInnerNodes());
+							sizebddmean += bdd.numberOfInnerNodes();
+						}
+						sizebddmean /= 1000;
+						elapsedTime = System.nanoTime() - startTime;
+						double timebdd = ((double) elapsedTime) / 1000000000.0;
+						bdd = null;
+						System.gc();
 
-	            	//BDD
-	            	writer.write(String.format("%14d", sizebdd));
-	            	writer.write(String.format("%8d", sizebddmin));
-	            	writer.write(String.format("%10.1f", sizebddmean));
-	            	writer.write(String.format("%8d", sizebddmax));
-	            	writer.write(String.format("%8.1f", timebdd));
+						//BDD
+						writer.write(String.format("%14d", sizebdd));
+						writer.write(String.format("%8d", sizebddmin));
+						writer.write(String.format("%10.1f", sizebddmean));
+						writer.write(String.format("%8d", sizebddmax));
+						writer.write(String.format("%8.1f", timebdd));
+					} else {
+	            		//Won't compute BDDs in encoded version
+						writer.write(String.format("%14s", "x"));
+						writer.write(String.format("%8s", "x"));
+						writer.write(String.format("%10s", "x"));
+						writer.write(String.format("%8s", "x"));
+						writer.write(String.format("%8s", "x"));
+					}
 
-	            	/*
+
 	            	//DT no lookahead
 	            	writer.write(String.format("%12d", sizedtnl));
 	            	writer.write(String.format("%8.1f", timedtnl));
 	            	writer.write(String.format("%4d", ladtnl));
 	            	writer.write(String.format("%4d", heudtnl));
 	            	writer.write(" "+(resultdtnl?"W":"L"));
-	            	*/
 
 	            	//DT
 	            	writer.write(String.format("%12d", sizedt));
