@@ -1,0 +1,11 @@
+
+Benchmarks:
+halfadder_match
+halfadder_shiftedmatch
+add4n
+bs16n
+bs32n
+bs64n
+bs128n
+bs256n ~8min
+bs512n ~75min

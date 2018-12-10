@@ -1,0 +1,130 @@
+HOA: v1
+properties: state-acc 
+States: 15
+Start: 0
+AP: 4 "p1" "p4" "p3" "p0"
+Acceptance: 2 Fin(0) & Inf(1)
+acc-name: parity min odd 2
+name: "Automaton for {((Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}"
+tool: "Owl" "* *"
+--BODY--
+State: 0 "{((Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {}
+[!3 & !2 & 1 & !0] 1
+[!3 & !2 & !1 & !0] 2
+[1 & 0 | 2 & 1 & !0] 3
+[3 & !2 & !1 & !0] 4
+[!1 & 0 | 2 & !1 & !0] 5
+[3 & !2 & 1 & !0] 6
+State: 1 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p3|Fp3)&(p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[!3 & 2 & 1 & !0] 8
+[!3 & 2 & !1 & !0] 9
+[0] 10
+[3 & !2 & !1 & !0] 4
+[3 & 2 & !1 & !0] 5
+[3 & 2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 2 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p3|Fp3)&(p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & !1 & !0] 2
+[!3 & !2 & 1 & !0] 1
+[!3 & 2 & !1 & !0] 9
+[0] 10
+[!3 & 2 & 1 & !0] 13
+[3 & 2 & 1 & !0] 3
+[3 & !2 & !1 & !0] 4
+[3 & 2 & !1 & !0] 5
+[3 & !2 & 1 & !0] 6
+State: 3 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[0] 10
+[3 & !2 & !1 & !0] 4
+[2 & !1 & !0] 5
+[2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 4 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & !1 & !0] 2
+[!3 & !2 & 1 & !0] 1
+[0] 10
+[2 & 1 & !0] 3
+[3 & !2 & !1 & !0] 4
+[2 & !1 & !0] 5
+[3 & !2 & 1 & !0] 6
+State: 5 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & !1 & !0] 2
+[!3 & !2 & 1 & !0] 1
+[0] 10
+[2 & 1 & !0] 3
+[3 & !2 & !1 & !0] 4
+[2 & !1 & !0] 5
+[3 & !2 & 1 & !0] 6
+State: 6 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[0] 10
+[3 & !2 & !1 & !0] 4
+[2 & !1 & !0] 5
+[2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 7 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))&G((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p3|Fp3)&(p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[!3 & 2 & 1 & !0] 8
+[!3 & 2 & !1 & !0] 9
+[0] 10
+[3 & !2 & !1 & !0] 4
+[3 & 2 & !1 & !0] 5
+[3 & 2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 8 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))&G((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p3|Fp3)&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[!3 & 2 & 1 & !0] 8
+[!3 & 2 & !1 & !0] 9
+[0] 10
+[3 & !2 & !1 & !0] 4
+[3 & 2 & !1 & !0] 5
+[3 & 2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 9 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p3|Fp3)&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & !1 & !0] 2
+[!3 & !2 & 1 & !0] 1
+[!3 & 2 & !1 & !0] 9
+[0] 10
+[!3 & 2 & 1 & !0] 13
+[3 & 2 & 1 & !0] 3
+[3 & !2 & !1 & !0] 4
+[3 & 2 & !1 & !0] 5
+[3 & !2 & 1 & !0] 6
+State: 10 "{(true::{}) []|[0]}" {0}
+[t] 14
+State: 11 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))&G((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[0] 10
+[3 & !2 & !1 & !0] 4
+[2 & !1 & !0] 5
+[2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 12 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&(p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))&G((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))&G((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p2|((p3|Fp3)&(Fp3Up2)))&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[0] 10
+[3 & !2 & !1 & !0] 4
+[2 & !1 & !0] 5
+[2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 13 "{((p0|Xp0|FXp0|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XG((Fp3Up2)Up0))|(p1&Gp1&((p2&Gp2)|FGp2)&GFGp2&XXG((Fp3Up2)Up0))|F(Gp1&GFGp2&XXG((Fp3Up2)Up0)))::{G((Fp3Up2)Up0)={(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0)))=2, ((p3|Fp3)&(p0|((p2|((p3|Fp3)&(Fp3Up2)))&((Fp3Up2)Up0))))=1}, Gp1={p1=1}, GFGp2={(Gp2|FGp2)=1}, Gp2={p2=1}}) []}" {0}
+[!3 & !2 & 1 & !0] 7
+[!3 & !2 & !1 & !0] 2
+[!3 & 2 & 1 & !0] 8
+[!3 & 2 & !1 & !0] 9
+[0] 10
+[3 & !2 & !1 & !0] 4
+[3 & 2 & !1 & !0] 5
+[3 & 2 & 1 & !0] 11
+[3 & !2 & 1 & !0] 12
+State: 14 "{(true::{}) []|[0]}" {1}
+[t] 14
+--END--
