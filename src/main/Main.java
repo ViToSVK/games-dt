@@ -6,13 +6,13 @@ package main;
  *
  */
 public class Main {
-	
+
 	public static void main(String[] args) {
 		if (args.length != 1) {
 			Routine.message();
 			return;
 		}
-		
+
 		switch (args[0]) {
 			case "aTOTAL" :
 				Routine.aiger();
@@ -39,7 +39,7 @@ public class Main {
 				break;
 			case "w3"	:
 				Routine.wash(3);
-				break;			
+				break;
 			case "w4"	:
 				Routine.wash(4);
 				break;
@@ -66,7 +66,7 @@ public class Main {
 				break;
 			default		:	Routine.message();
 		}
-			
+
 	}
 
 }
