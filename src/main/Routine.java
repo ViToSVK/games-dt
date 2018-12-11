@@ -189,13 +189,14 @@ public class Routine {
 						int sizebddmax = bdd.numberOfInnerNodes();
 						int sizebddmin = bdd.numberOfInnerNodes();
 						double sizebddmean = 0;
-						for (int j=0; j<1000; j++) {
+						int attemptno = 10; // 1000
+						for (int j=0; j<attemptno; j++) {
 							bdd = new BinaryDecisionDiagram(ds, true, seedgen.nextInt(31337));
 							sizebddmax = Math.max(sizebddmax, bdd.numberOfInnerNodes());
 							sizebddmin = Math.min(sizebddmin, bdd.numberOfInnerNodes());
 							sizebddmean += bdd.numberOfInnerNodes();
 						}
-						sizebddmean /= 1000;
+						sizebddmean /= attemptno;
 						elapsedTime = System.nanoTime() - startTime;
 						double timebdd = ((double) elapsedTime) / 1000000000.0;
 						bdd = null;
@@ -215,7 +216,6 @@ public class Routine {
 						writer.write(String.format("%8s", "x"));
 						writer.write(String.format("%8s", "x"));
 					}
-
 
 	            	//DT no lookahead
 	            	writer.write(String.format("%12d", sizedtnl));
@@ -282,7 +282,7 @@ public class Routine {
 
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, false))) {
         	writer.write(String.format("%118s","|BDD|"));
-        	//writer.write(String.format("%30s","|DTnl|"));
+        	writer.write(String.format("%30s","|DTnl|"));
         	writer.write(String.format("%30s","|DT|"));
         	writer.write(String.format("%30s","|DT+|"));
         	writer.write(nl);
@@ -299,11 +299,11 @@ public class Routine {
         	writer.write(String.format("%8s","Max"));
         	writer.write(String.format("%8s","Time"));
 
-        	//writer.write(String.format("%12s", "Size"));
-        	//writer.write(String.format("%8s", "Time"));
-        	//writer.write(String.format("%4s", "LA"));
-        	//writer.write(String.format("%4s", "Heu"));
-        	//writer.write(" ?");
+        	writer.write(String.format("%12s", "Size"));
+        	writer.write(String.format("%8s", "Time"));
+        	writer.write(String.format("%4s", "LA"));
+        	writer.write(String.format("%4s", "Heu"));
+        	writer.write(" ?");
 
         	writer.write(String.format("%12s", "Size"));
         	writer.write(String.format("%8s", "Time"));
@@ -390,7 +390,6 @@ public class Routine {
             	dt = null;
             	System.gc();
 
-            	/*
             	startTime = System.nanoTime();
             	DecisionTree dtnl = new DecisionTree(ds, false, false);
             	elapsedTime = System.nanoTime() - startTime;
@@ -402,7 +401,6 @@ public class Routine {
 					 Safety.checkDT(game.first(), gameinfo, dtnl));
             	dtnl = null;
             	System.gc();
-            	*/
 
             	startTime = System.nanoTime();
             	BinaryDecisionDiagram bdd = new BinaryDecisionDiagram(ds, false, -1);
@@ -410,13 +408,14 @@ public class Routine {
             	int sizebddmax = bdd.numberOfInnerNodes();
             	int sizebddmin = bdd.numberOfInnerNodes();
             	double sizebddmean = 0;
-            	for (int j=0; j<1000; j++) {
+				int attemptno = 10; // 1000
+            	for (int j=0; j<attemptno; j++) {
             		bdd = new BinaryDecisionDiagram(ds, true, seedgen.nextInt(31337));
             		sizebddmax = Math.max(sizebddmax, bdd.numberOfInnerNodes());
             		sizebddmin = Math.min(sizebddmin, bdd.numberOfInnerNodes());
             		sizebddmean += bdd.numberOfInnerNodes();
             	}
-            	sizebddmean /= 1000;
+            	sizebddmean /= attemptno;
             	elapsedTime = System.nanoTime() - startTime;
             	double timebdd = ((double) elapsedTime) / 1000000000.0;
             	bdd = null;
@@ -429,14 +428,12 @@ public class Routine {
             	writer.write(String.format("%8d", sizebddmax));
             	writer.write(String.format("%8.1f", timebdd));
 
-            	/*
             	//DT no lookahead
             	writer.write(String.format("%12d", sizedtnl));
             	writer.write(String.format("%8.1f", timedtnl));
             	writer.write(String.format("%4d", ladtnl));
             	writer.write(String.format("%4d", heudtnl));
             	writer.write(" "+(resultdtnl?"W":"L"));
-            	*/
 
             	//DT
             	writer.write(String.format("%12d", sizedt));
