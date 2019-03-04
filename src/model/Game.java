@@ -1,5 +1,9 @@
 package model;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -7,6 +11,7 @@ import java.util.TreeSet;
 import creator.Aiger;
 import creator.Rabinizer;
 import creator.Wash;
+import util.Util;
 
 /**
  * @author vtoman - Viktor Toman
@@ -14,20 +19,21 @@ import creator.Wash;
  *
  */
 public class Game {
-	
+
 	public ArrayList<String> varStateP1, varStateP2, varActionP1, varActionP2;
 	public int varStateP1no() { return varStateP1.size(); }
 	public int varStateP2no() { return varStateP2.size(); }
 	public int varActionP1no() { return varActionP1.size(); }
 	public int varActionP2no() { return varActionP2.size(); }
-	
+
 	public int initialState;
 	public TreeMap<Integer, State> states;
 	public TreeMap<Integer, TreeSet<Integer>> transitions;
-	
+
 	public int stateSize;
 	public long transitionSize;
-	
+	public int numberOfParities;
+
 	public Game() {
 		varStateP1 = new ArrayList<String>();
 		varStateP2 = new ArrayList<String>();
@@ -38,20 +44,21 @@ public class Game {
 		transitions = new TreeMap<Integer, TreeSet<Integer>>();
 		stateSize = 0;
 		transitionSize = 0;
+		numberOfParities = -1;
 	}
-	
+
 	public boolean addState(int name, int player, ArrayList<Boolean> values) {
 		State old = states.put(name, new State((byte) player, values));
 		if (old==null) stateSize++;
 		return old==null;
 	}
-	
+
 	public boolean addState(int name, int player, ArrayList<Boolean> values, int parity) {
 		State old = states.put(name, new State((byte) player, values, (byte) parity));
 		if (old==null) stateSize++;
 		return old==null;
 	}
-	
+
 	public boolean addTransition(int from, int into) {
 		if (!transitions.containsKey(from))
 			transitions.put(from, new TreeSet<Integer>());
@@ -59,7 +66,7 @@ public class Game {
 		if (result) transitionSize++;
 		return result;
 	}
-	
+
 	public boolean removeTransition(int from, int into) {
 		if (!transitions.containsKey(from))
 			return false;
@@ -69,7 +76,7 @@ public class Game {
 			transitions.remove(from);
 		return result;
 	}
-	
+
 	/**
 	 * Returns the successor for a given state-action pair
 	 * @param gameinfo		Info about the game
@@ -81,7 +88,7 @@ public class Game {
 	public int successor(GameInfo gameinfo, int state, int label, int succowner) {
 		assert(gameinfo.type == 'a' || gameinfo.type == 'w' || gameinfo.type == 'r');
 		assert(succowner == 1 || succowner == 2);
-		
+
 		if (gameinfo.type == 'a') {
 			ArrayList<Boolean> result = Aiger.successor(this, state, label);
 			for (Integer key: states.keySet()) {
@@ -90,7 +97,7 @@ public class Game {
 			}
 			assert(false);
 		}
-		
+
 		if (gameinfo.type == 'w') {
 			ArrayList<Boolean> result = Wash.successor(this, gameinfo, state, label);
 			for (Integer key: states.keySet()) {
@@ -99,15 +106,69 @@ public class Game {
 			}
 			assert(false);
 		}
-		
+
 		if (gameinfo.type == 'r') {
 			int key = Rabinizer.successor(this, gameinfo, state, label);
 			assert(this.states.get(key).player == succowner);
 			return key;
 		}
-		
+
 		assert(false);
 		return 0;
 	}
-	
+
+	public void dump(GameInfo gameinfo, File outputFile) {
+		try(BufferedWriter w = new BufferedWriter(new FileWriter(outputFile))) {
+
+			w.write(String.format("states: %d\n", states.size()));
+			w.write(String.format("parities: %d and player2 (controller) plays 'min is odd'\n", numberOfParities));
+
+			w.write(String.format("varStateP1: %d\n", varStateP1no()));
+			for (int i = 0; i < varStateP1no(); i++)
+				w.write(String.format("%s\n", varStateP1.get(i)));
+
+			w.write(String.format("varStateP2: %d\n", varStateP2no()));
+			for (int i = 0; i < varStateP2no(); i++)
+				w.write(String.format("%s\n", varStateP2.get(i)));
+
+			w.write(String.format("varActionP1: %d\n", varActionP1no()));
+			for (int i = 0; i < varActionP1no(); i++)
+				w.write(String.format("%s\n", varActionP1.get(i)));
+
+			w.write(String.format("varActionP2: %d\n", varActionP2no()));
+			for (int i = 0; i < varActionP2no(); i++)
+				w.write(String.format("%s\n", varActionP2.get(i)));
+
+			for (Integer no : states.keySet()) {
+				w.write(String.format("state %d = %s\n", no, states.get(no).dump(true)));
+				// Print actions
+				if (states.get(no).player == 1) {
+					// Player 1
+					for (int P1decimal = 0; P1decimal < Util.bitpower(varActionP1no()); P1decimal++) {
+						ArrayList<Boolean> P1binary = Util.binary(varActionP1no(), P1decimal);
+						w.write("action ");
+						for (int i = 0; i < P1binary.size(); i++)
+							w.write(P1binary.get(i)?"1 ":"0 ");
+						w.write(String.format("leadsto %d\n", successor(gameinfo, no, P1decimal, 2)));
+					}
+				} else {
+					// Player 2
+					for (int P2decimal = 0; P2decimal < Util.bitpower(varActionP2no()); P2decimal++) {
+						ArrayList<Boolean> P2binary = Util.binary(varActionP2no(), P2decimal);
+						w.write("action ");
+						for (int i = 0; i < P2binary.size(); i++)
+							w.write(P2binary.get(i)?"1 ":"0 ");
+						w.write(String.format("leadsto %d\n", successor(gameinfo, no, P2decimal, 1)));
+					}
+				}
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+			return;
+		}
+
+
+	}
+
 }

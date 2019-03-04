@@ -4,3 +4,7 @@ out/**/*.class
 
 # idea
 .idea/*
+
+# results
+results/*
+
