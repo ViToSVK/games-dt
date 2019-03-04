@@ -1,0 +1,6 @@
+
+# binaries
+out/**/*.class
+
+# idea
+.idea/*
